@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\SoapService\Reference.cs">
+    <Compile Include="Service References\SimpleStorage\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -55,17 +55,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\SoapService\Mocosha.SoapTestClient.SoapService.CompositeType.datasource">
+    <None Include="Service References\SimpleStorage\Mocosha.SoapTestClient.SimpleStorage.ResponseOfAnimalRKSw_P_P4R.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SoapService\Service1.wsdl" />
-    <None Include="Service References\SoapService\Service1.xsd">
+    <None Include="Service References\SimpleStorage\SimpleService1.wsdl" />
+    <None Include="Service References\SimpleStorage\SimpleService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SoapService\Service11.xsd">
+    <None Include="Service References\SimpleStorage\SimpleService41.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SoapService\Service12.xsd">
+    <None Include="Service References\SimpleStorage\SimpleService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SimpleStorage\SimpleService43.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -73,22 +76,22 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\SoapService\" />
+    <WCFMetadataStorage Include="Service References\SimpleStorage\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SoapService\Service1.disco" />
+    <None Include="Service References\SimpleStorage\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SoapService\configuration91.svcinfo" />
+    <None Include="Service References\SimpleStorage\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SoapService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SoapService\Reference.svcmap">
+    <None Include="Service References\SimpleStorage\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SimpleStorage\SimpleService1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

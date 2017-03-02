@@ -10,9 +10,27 @@ namespace Mocosha.SoapTestClient
     {
         static void Main(string[] args)
         {
-            SoapService.Service1Client ss = new SoapService.Service1Client();
-            var result = ss.GetData(5);
+            SimpleStorage.SimpleServiceClient ss = new SimpleStorage.SimpleServiceClient();
+
+            var result = ss.Add(null);
             Console.WriteLine(result);
+
+            result = ss.Add("test2");
+            Console.WriteLine(result);
+
+            result = ss.AddWithKey("ABC", "test2");
+            Console.WriteLine(result);
+
+            result = ss.AddAnimal("11", new SimpleStorage.Animal { Name = "lav" });
+            Console.WriteLine(result);
+
+            Console.WriteLine(new string('-', 50));
+            Console.WriteLine("Items from storage as key - value:");
+            foreach (var item in ss.GetAll())
+            {
+                Console.WriteLine($"{item.Key} - {item.Value}");
+            }
+
             Console.ReadKey(true);
         }
     }
