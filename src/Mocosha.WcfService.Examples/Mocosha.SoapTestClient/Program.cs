@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,27 +12,29 @@ namespace Mocosha.SoapTestClient
     {
         static void Main(string[] args)
         {
-            SimpleStorage.SimpleServiceClient ss = new SimpleStorage.SimpleServiceClient();
-            var r = ss.Endpoint;
+            SimpleStorage.SimpleServiceClient client = new SimpleStorage.SimpleServiceClient();
 
-            var result = ss.Add(null);
+            var endpoint = ConfigurationManager.AppSettings["endpoint"];
+            client.Endpoint.Address = new EndpointAddress(endpoint);
+
+            var result = client.Add(null);
             Console.WriteLine(result);
 
-            result = ss.Add("test2");
+            result = client.Add("test2");
             Console.WriteLine(result);
 
-            result = ss.AddWithKey("ABC", "test2");
+            result = client.AddWithKey("ABC", "test2");
             Console.WriteLine(result);
 
-            result = ss.Remove("ABC");
+            result = client.Remove("ABC");
             Console.WriteLine(result);
 
-            result = ss.AddAnimal("11", new SimpleStorage.Animal { Name = "lav" });
+            result = client.AddAnimal("11", new SimpleStorage.Animal { Name = "lav" });
             Console.WriteLine(result);
 
             Console.WriteLine(new string('-', 50));
             Console.WriteLine("Items from storage as key - value:");
-            foreach (var item in ss.GetAll())
+            foreach (var item in client.GetAll())
             {
                 Console.WriteLine($"{item.Key} - {item.Value}");
             }
