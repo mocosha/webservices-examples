@@ -1,4 +1,4 @@
-﻿using Mocosha.KeyValueStore;
+﻿using Mocosha.Library.KeyValueStore;
 using Mocosha.WepApi.SimpleStorage.Models;
 using System;
 using System.Collections.Generic;
@@ -7,26 +7,30 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
+
+
 namespace Mocosha.WepApi.SimpleStorage.Controllers
 {
     public class AnimalController : ApiController
     {
+        private Storage myStorage = Startup.MyStorage;
+
         // GET: api/Animal/5
         public Animal Get(string key)
-        {
-            return Storage.Find<Animal>(key);
+        {                        
+            return myStorage.Find<Animal>(key);
         }
 
         // POST: api/Animal
         public void Post(string key, Animal value)
-        {
-            Storage.Insert<Animal>(key, value);
+        {            
+            myStorage.Insert(key, myStorage.SerializeObject(value));
         }
 
         // DELETE: api/Animal/5
         public void Delete(string key)
         {
-            Storage.Delete(key);
+            myStorage.Delete(key);
         }
     }
 }

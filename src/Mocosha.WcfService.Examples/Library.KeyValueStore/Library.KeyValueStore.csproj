@@ -7,8 +7,8 @@
     <ProjectGuid>{97010F5D-EED4-41EC-8C65-7F7A84A410FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mocosha.KeyValueStore</RootNamespace>
-    <AssemblyName>Mocosha.KeyValueStore</AssemblyName>
+    <RootNamespace>Mocosha.Library.KeyValueStore</RootNamespace>
+    <AssemblyName>Mocosha.Library.KeyValueStore</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

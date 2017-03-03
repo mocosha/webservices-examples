@@ -116,9 +116,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mocosha.KeyValueStore\Mocosha.KeyValueStore.csproj">
-      <Project>{97010f5d-eed4-41ec-8c65-7f7a84a410fe}</Project>
-      <Name>Mocosha.KeyValueStore</Name>
+    <ProjectReference Include="..\Library.KeyValueStore\Library.KeyValueStore.csproj">
+      <Project>{97010F5D-EED4-41EC-8C65-7F7A84A410FE}</Project>
+      <Name>Library.KeyValueStore</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -132,7 +132,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50051</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
