@@ -28,7 +28,7 @@ namespace Mocosha.KeyValueStore
 
             if (storage.ContainsKey(key))
             {
-                return "Item with the same key already exists";
+                return $"Item with the key {key} already exists";
             }
 
             storage.Add(key, value);
@@ -84,7 +84,7 @@ namespace Mocosha.KeyValueStore
 
             if (storage.ContainsKey(key))
             {
-                return "Item with the same key already exists";
+                return $"Item with the key {key} already exists";
             }
 
             var serializeValue = JsonConvert.SerializeObject(value);
@@ -109,6 +109,6 @@ namespace Mocosha.KeyValueStore
             return storage;
         }
 
-        private static Dictionary<string, string> storage = new Dictionary<string, string>();
+        private static Dictionary<string, string> storage = new Dictionary<string, string>() { { "test", "test" } };
     }
 }

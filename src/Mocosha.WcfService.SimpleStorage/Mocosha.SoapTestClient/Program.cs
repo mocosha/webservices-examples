@@ -11,6 +11,7 @@ namespace Mocosha.SoapTestClient
         static void Main(string[] args)
         {
             SimpleStorage.SimpleServiceClient ss = new SimpleStorage.SimpleServiceClient();
+            var r = ss.Endpoint;
 
             var result = ss.Add(null);
             Console.WriteLine(result);
@@ -19,6 +20,9 @@ namespace Mocosha.SoapTestClient
             Console.WriteLine(result);
 
             result = ss.AddWithKey("ABC", "test2");
+            Console.WriteLine(result);
+
+            result = ss.Remove("ABC");
             Console.WriteLine(result);
 
             result = ss.AddAnimal("11", new SimpleStorage.Animal { Name = "lav" });

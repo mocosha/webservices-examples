@@ -167,7 +167,7 @@
   </wsdl:binding>
   <wsdl:service name="SimpleService">
     <wsdl:port name="BasicHttpBinding_ISimpleService" binding="tns:BasicHttpBinding_ISimpleService">
-      <soap:address location="http://localhost/SimpleStorage/SimpleService.svc" />
+      <soap:address location="http://localhost/SimpleStorage/SimpleService.svc/soap" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

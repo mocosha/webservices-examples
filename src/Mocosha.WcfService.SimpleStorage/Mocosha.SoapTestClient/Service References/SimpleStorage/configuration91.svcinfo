@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Ak9bS/tFq8d+mIAQDOSORhh1sPs=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="os+MQXdr8KIQGvUTpbgPbk447NA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ISimpleService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ISimpleService" contract="SimpleStorage.ISimpleService" bindingType="basicHttpBinding" address="http://localhost/SimpleStorage/SimpleService.svc" bindingConfiguration="BasicHttpBinding_ISimpleService">
+    <endpoint name="BasicHttpBinding_ISimpleService" contract="SimpleStorage.ISimpleService" bindingType="basicHttpBinding" address="http://localhost/SimpleStorage/SimpleService.svc/soap" bindingConfiguration="BasicHttpBinding_ISimpleService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost/SimpleStorage/SimpleService.svc</serializedValue>
+          <serializedValue>http://localhost/SimpleStorage/SimpleService.svc/soap</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
