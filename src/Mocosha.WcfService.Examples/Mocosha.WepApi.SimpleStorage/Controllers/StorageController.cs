@@ -17,7 +17,7 @@ namespace Mocosha.WepApi.SimpleStorage.Controllers
         }
 
         // GET: api/Storage/5
-        public string GetById(string id)
+        public string GetValueById(string id)
         {
             return Storage.Find(id);
         }
