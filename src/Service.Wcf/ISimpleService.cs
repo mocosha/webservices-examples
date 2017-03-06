@@ -21,8 +21,8 @@ namespace Mocosha.WcfService.SimpleStorage
             Method = "GET",
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "Find/{key}")]
-        ReadResult<string> Find(string key);
+            UriTemplate = "Find/{id}")]
+        ReadResult<string> Find(string id);
 
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped,
@@ -30,7 +30,7 @@ namespace Mocosha.WcfService.SimpleStorage
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "Add")]
-        WriteResult Add(string key, string value);
+        WriteResult Add(string id, string value);
 
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped,
@@ -38,14 +38,14 @@ namespace Mocosha.WcfService.SimpleStorage
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "Update")]
-        WriteResult Update(string key, string value);
+        WriteResult Update(string id, string value);
 
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped,
             Method = "DELETE",
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "Remove/{key}")]
-        WriteResult Remove(string key);
+            UriTemplate = "Remove/{id}")]
+        WriteResult Remove(string id);
     }
 }
