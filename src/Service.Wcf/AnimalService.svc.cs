@@ -12,9 +12,9 @@ namespace Mocosha.WcfService.SimpleStorage
             return myStorage.FindAll();
         }
 
-        public ReadResult<Animal> Find(string id)
+        public ReadResult<Animal> Find(string key)
         {
-            return myStorage.Find<Animal>(id);
+            return myStorage.Find<Animal>(key);
         }
 
         public WriteResult Add(string key, Animal animal)
@@ -27,9 +27,9 @@ namespace Mocosha.WcfService.SimpleStorage
             return myStorage.Update(key, animal);
         }
 
-        public WriteResult Remove(string id)
+        public WriteResult Remove(string key)
         {
-            return myStorage.Delete(id);
+            return myStorage.Delete(key);
         }
     }
 }
