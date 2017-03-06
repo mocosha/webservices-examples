@@ -6,7 +6,7 @@ namespace Mocosha.WcfService.SimpleStorage
 {
     public class SimpleService : ISimpleService
     {
-        private Storage myStorage = new Storage();
+        private static Storage myStorage = new Storage();
 
         public Dictionary<string, string> GetAll()
         {
