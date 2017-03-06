@@ -9,21 +9,27 @@ namespace Mocosha.SoapTestClient
     class Program
     {
         static void PrintReadResult(SimpleService.ReadResultOfstring result)
-        {            
-            Console.WriteLine($"IsSuccess: {result.IsSuccess}, Value: '{result.Value}', Message: '{result.Message}'");
+        {
+            Console.WriteLine($"IsSuccess: {result.IsSuccess}, Value: {result.Value}, Message: {result.Message}");
         }
 
         static void PrintWriteResult(SimpleService.WriteResult result)
         {
-            Console.WriteLine($"IsSuccess: {result.IsSuccess}, Message: '{result.Message}'" );
+            Console.WriteLine($"IsSuccess: {result.IsSuccess}, Message: {result.Message}");
         }
 
-        static void PrintAll(KeyValuePair<string,string>[] items)
-        {            
-            Console.WriteLine("Items from storage as key - value:");
-            foreach (var item in items)
+        static void PrintAll(KeyValuePair<string, string>[] items)
+        {
+            if (items.Length == 0)
+                Console.WriteLine("No items found");
+            else
             {
-                Console.WriteLine($"{item.Key} - {item.Value}");
+                Console.WriteLine("Items from storage as key - value:");
+
+                foreach (var item in items)
+                {
+                    Console.WriteLine($"{item.Key} - {item.Value}");
+                }
             }
         }
 
@@ -38,7 +44,7 @@ namespace Mocosha.SoapTestClient
         static void Main(string[] args)
         {
             // these variables will be set when the command line is parsed            
-            var shouldShowHelp = args.Length == 0;            
+            var shouldShowHelp = args.Length == 0;
 
             var client = new SimpleService.SimpleServiceClient();
 

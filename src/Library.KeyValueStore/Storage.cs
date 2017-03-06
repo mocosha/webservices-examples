@@ -16,8 +16,8 @@ namespace Mocosha.Library.KeyValueStore
             var isSuccess = storage.TryAdd(key, value);
 
             return isSuccess 
-                ? WriteResult.Success($"Value {value} with key {key} added") 
-                : WriteResult.Failure($"Key {key} already exists");
+                ? WriteResult.Success($"Key '{key}' with value '{value}' added") 
+                : WriteResult.Failure($"Key '{key}' already exists");
         }
 
         public WriteResult Insert<T>(string key, T value)
@@ -38,7 +38,7 @@ namespace Mocosha.Library.KeyValueStore
             if (oldValue.IsSuccess)
             {
                 var isSuccess = storage.TryUpdate(key, value, oldValue.Value);
-                return WriteResult.Success($"Value {value} with key {key} updated");
+                return WriteResult.Success($"Value '{oldValue.Value}' with '{key}' updated with new value '{value}'");
             }
             else
             {
@@ -60,8 +60,8 @@ namespace Mocosha.Library.KeyValueStore
             var isSuccess = storage.TryRemove(key, out value);
 
             return isSuccess
-                ? WriteResult.Success($"Value {value} successfully removed")
-                : WriteResult.Success($"Key {key} doesn't exist");
+                ? WriteResult.Success($"Key '{key}' with value '{value}' removed")
+                : WriteResult.Success($"Key '{key}' doesn't exist");
         }
 
         public ReadResult<T> Find<T>(string key)
@@ -73,7 +73,7 @@ namespace Mocosha.Library.KeyValueStore
             if (storage.TryGetValue(key, out value))
                 return ReadResult<T>.Success(value);
 
-            return ReadResult<T>.Failure($"Key {key} not found");
+            return ReadResult<T>.Failure($"Key '{key}' not found");
         }
 
         public KeyValuePair<string, string>[] FindAll()
