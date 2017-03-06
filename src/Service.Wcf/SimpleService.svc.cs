@@ -8,55 +8,39 @@ namespace Mocosha.WcfService.SimpleStorage
     {
         private static Storage myStorage = new Storage();
 
-        public Dictionary<string, string> GetAll()
+        public KeyValuePair<string, string>[] FindAll()
         {
             return myStorage.FindAll();
         }
 
-        public string FindById(string id)
+        public ReadResult<string> Find(string id)
         {
-            return myStorage.Find(id);
+            return myStorage.Find<string>(id);
         }
 
-        public string Add(string value)
-        {
-            var dummyKey = Guid.NewGuid().ToString();
-            return myStorage.Insert(dummyKey, value);
-        }
-
-        public string Add(string key, string value)
+        public WriteResult Add(string key, string value)
         {
             return myStorage.Insert(key, value);
         }
 
-        public string Update(string id, string value)
+        public WriteResult Update(string id, string value)
         {
             return myStorage.Update(id, value);
         }
 
-        public string Remove(string id)
+        public WriteResult Remove(string id)
         {
             return myStorage.Delete(id);
         }
 
-        public Response<Animal> FindAnimalById(string id)
+        public ReadResult<Animal> FindAnimalById(string id)
         {
-            try
-            {
-                var animal = myStorage.Find<Animal>(id);
-
-                return new Response<Animal> { Result = animal, Success = true };
-            }
-            catch (Exception ex)
-            {
-                return new Response<Animal> { Message = ex.Message, Success = false };
-            }
+            return myStorage.Find<Animal>(id);
         }
 
-        public string AddAnimal(string key, Animal animal)
+        public WriteResult AddAnimal(string key, Animal animal)
         {
-            var animalJson = myStorage.SerializeObject(animal);
-            return myStorage.Insert(key, animalJson);
+            return myStorage.Insert(key, animal);
         }
     }
 }
