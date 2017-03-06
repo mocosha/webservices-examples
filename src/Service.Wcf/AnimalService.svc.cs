@@ -5,7 +5,7 @@ namespace Mocosha.WcfService.SimpleStorage
 {
     public class AnimalService : IAnimalService
     {
-        private static Storage myStorage = new Storage();
+        private static Storage myStorage = Store.MyStorage;
 
         public KeyValuePair<string, string>[] FindAll()
         {

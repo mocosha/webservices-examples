@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b4f990db-7bc1-484a-ba16-1a88ad2d097c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50051/SimpleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SimpleService.xsd" MetadataType="Schema" ID="02d779da-5069-4ef1-8de6-a77aedcfb7d6" SourceId="1" SourceUrl="http://localhost:50051/SimpleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SimpleService1.xsd" MetadataType="Schema" ID="3680a287-73f0-4f2b-b8cf-06fe10b2ea66" SourceId="1" SourceUrl="http://localhost:50051/SimpleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SimpleService2.xsd" MetadataType="Schema" ID="19311481-7d39-417b-8eb5-ff14fc80591d" SourceId="1" SourceUrl="http://localhost:50051/SimpleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SimpleService.disco" MetadataType="Disco" ID="719bacfc-81be-4e03-83eb-c58104171c65" SourceId="1" SourceUrl="http://localhost:50051/SimpleService.svc?disco" />
+    <MetadataFile FileName="SimpleService.wsdl" MetadataType="Wsdl" ID="ae4cfc59-6e97-446b-91ad-6df81667119f" SourceId="1" SourceUrl="http://localhost:50051/SimpleService.svc?wsdl" />
+    <MetadataFile FileName="SimpleService3.xsd" MetadataType="Schema" ID="2652354e-cae5-4b76-9361-e6774b09cb77" SourceId="1" SourceUrl="http://localhost:50051/SimpleService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

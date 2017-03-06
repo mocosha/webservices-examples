@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mocosha.SoapTestClient</RootNamespace>
-    <AssemblyName>Mocosha.SoapTestClient</AssemblyName>
+    <AssemblyName>cli</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Options, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Options.4.4.0.0\lib\net4-client\Mono.Options.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -48,7 +52,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\SimpleStorage\Reference.cs">
+    <Compile Include="Service References\SimpleService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -56,20 +60,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\SimpleStorage\Mocosha.SoapTestClient.SimpleStorage.ResponseOfAnimalRKSw_P_P4R.datasource">
+    <None Include="demo.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\SimpleService\Mocosha.SoapTestClient.SimpleService.ReadResultOfstring.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SimpleStorage\SimpleService1.wsdl" />
-    <None Include="Service References\SimpleStorage\SimpleService4.xsd">
+    <None Include="Service References\SimpleService\Mocosha.SoapTestClient.SimpleService.WriteResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SimpleService\SimpleService.wsdl" />
+    <None Include="Service References\SimpleService\SimpleService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SimpleStorage\SimpleService41.xsd">
+    <None Include="Service References\SimpleService\SimpleService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SimpleStorage\SimpleService42.xsd">
+    <None Include="Service References\SimpleService\SimpleService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SimpleStorage\SimpleService43.xsd">
+    <None Include="Service References\SimpleService\SimpleService3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -77,22 +88,22 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\SimpleStorage\" />
+    <WCFMetadataStorage Include="Service References\SimpleService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SimpleStorage\configuration91.svcinfo" />
+    <None Include="Service References\SimpleService\SimpleService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SimpleStorage\configuration.svcinfo" />
+    <None Include="Service References\SimpleService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SimpleStorage\Reference.svcmap">
+    <None Include="Service References\SimpleService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SimpleService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SimpleStorage\SimpleService1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

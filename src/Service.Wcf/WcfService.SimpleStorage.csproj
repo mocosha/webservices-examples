@@ -103,6 +103,7 @@
     <Compile Include="SimpleService.svc.cs">
       <DependentUpon>SimpleService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Store.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
