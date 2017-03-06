@@ -1,7 +1,7 @@
 using System.Web.Http;
 using Swashbuckle.Application;
 
-namespace Mocosha.WepApi.SimpleStorage
+namespace Mocosha.WebApi.SimpleStorage
 {
     public class SwaggerConfig
     {
@@ -9,7 +9,7 @@ namespace Mocosha.WepApi.SimpleStorage
         {
             config.EnableSwagger(c =>
                     {
-                        c.SingleApiVersion("v1", "Mocosha.WepApi.SimpleStorage");
+                        c.SingleApiVersion("v1", "Mocosha.WebApi.SimpleStorage");
                     })
                 .EnableSwaggerUi(c => { });
         }

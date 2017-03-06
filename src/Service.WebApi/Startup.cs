@@ -5,9 +5,9 @@ using Owin;
 using System.Web.Http;
 using Mocosha.Library.KeyValueStore;
 
-[assembly: OwinStartup(typeof(Mocosha.WepApi.SimpleStorage.Startup))]
+[assembly: OwinStartup(typeof(Mocosha.WebApi.SimpleStorage.Startup))]
 
-namespace Mocosha.WepApi.SimpleStorage
+namespace Mocosha.WebApi.SimpleStorage
 {
     public class Startup
     {

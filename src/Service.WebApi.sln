@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mocosha.WepApi.SimpleStorage", "Service.WepApi\Mocosha.WepApi.SimpleStorage.csproj", "{1C24307B-C798-4325-9E94-F582AC27F74D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.KeyValueStore", "Library.KeyValueStore\Library.KeyValueStore.csproj", "{97010F5D-EED4-41EC-8C65-7F7A84A410FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.SimpleStorage", "Service.WebApi\WebApi.SimpleStorage.csproj", "{1C24307B-C798-4325-9E94-F582AC27F74D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1C24307B-C798-4325-9E94-F582AC27F74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C24307B-C798-4325-9E94-F582AC27F74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C24307B-C798-4325-9E94-F582AC27F74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C24307B-C798-4325-9E94-F582AC27F74D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{97010F5D-EED4-41EC-8C65-7F7A84A410FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97010F5D-EED4-41EC-8C65-7F7A84A410FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97010F5D-EED4-41EC-8C65-7F7A84A410FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97010F5D-EED4-41EC-8C65-7F7A84A410FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C24307B-C798-4325-9E94-F582AC27F74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C24307B-C798-4325-9E94-F582AC27F74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C24307B-C798-4325-9E94-F582AC27F74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C24307B-C798-4325-9E94-F582AC27F74D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

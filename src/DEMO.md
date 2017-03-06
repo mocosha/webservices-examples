@@ -23,10 +23,12 @@ In engineering, system integration is defined as the process of bringing togethe
 Two competing approaches REST-style vs SOAP-based.
 
 ### SOAP
+It uses XML Information Set for its message format, and relies on application layer protocols, most often Hypertext Transfer Protocol (HTTP) or Simple Mail Transfer Protocol (SMTP), for message negotiation and transmission.
+
 SOAP specification can be broadly defined to be consisting of the following 3 conceptual components: Protocol concepts, encapsulation concepts and Network concepts.
 - XML: Describing information sent over the network (Envelope, [Header], Body, [Fault])
 - WSDL: Defining Web service capability (Web Services Description Language)
-- SOAP: Accessing Web services
+- SOAP: Accessing Web services (Simple Object Access Protocol)
 - UDDI: Finding web services
 
 ### REST

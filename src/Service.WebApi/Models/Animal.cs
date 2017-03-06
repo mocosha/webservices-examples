@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Mocosha.WepApi.SimpleStorage.Models
+namespace Mocosha.WebApi.SimpleStorage.Models
 {
     public class Animal
     {        
