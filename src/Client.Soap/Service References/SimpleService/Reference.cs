@@ -162,10 +162,10 @@ namespace Mocosha.SoapTestClient.SimpleService {
         System.Threading.Tasks.Task<System.Collections.Generic.KeyValuePair<string, string>[]> FindAllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISimpleService/Find", ReplyAction="http://tempuri.org/ISimpleService/FindResponse")]
-        Mocosha.SoapTestClient.SimpleService.ReadResultOfstring Find(string id);
+        Mocosha.SoapTestClient.SimpleService.ReadResultOfstring Find(string key);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISimpleService/Find", ReplyAction="http://tempuri.org/ISimpleService/FindResponse")]
-        System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.ReadResultOfstring> FindAsync(string id);
+        System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.ReadResultOfstring> FindAsync(string key);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISimpleService/Add", ReplyAction="http://tempuri.org/ISimpleService/AddResponse")]
         Mocosha.SoapTestClient.SimpleService.WriteResult Add(string key, string value);
@@ -174,16 +174,16 @@ namespace Mocosha.SoapTestClient.SimpleService {
         System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> AddAsync(string key, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISimpleService/Update", ReplyAction="http://tempuri.org/ISimpleService/UpdateResponse")]
-        Mocosha.SoapTestClient.SimpleService.WriteResult Update(string id, string value);
+        Mocosha.SoapTestClient.SimpleService.WriteResult Update(string key, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISimpleService/Update", ReplyAction="http://tempuri.org/ISimpleService/UpdateResponse")]
-        System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> UpdateAsync(string id, string value);
+        System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> UpdateAsync(string key, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISimpleService/Remove", ReplyAction="http://tempuri.org/ISimpleService/RemoveResponse")]
-        Mocosha.SoapTestClient.SimpleService.WriteResult Remove(string id);
+        Mocosha.SoapTestClient.SimpleService.WriteResult Remove(string key);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISimpleService/Remove", ReplyAction="http://tempuri.org/ISimpleService/RemoveResponse")]
-        System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> RemoveAsync(string id);
+        System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> RemoveAsync(string key);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -221,12 +221,12 @@ namespace Mocosha.SoapTestClient.SimpleService {
             return base.Channel.FindAllAsync();
         }
         
-        public Mocosha.SoapTestClient.SimpleService.ReadResultOfstring Find(string id) {
-            return base.Channel.Find(id);
+        public Mocosha.SoapTestClient.SimpleService.ReadResultOfstring Find(string key) {
+            return base.Channel.Find(key);
         }
         
-        public System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.ReadResultOfstring> FindAsync(string id) {
-            return base.Channel.FindAsync(id);
+        public System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.ReadResultOfstring> FindAsync(string key) {
+            return base.Channel.FindAsync(key);
         }
         
         public Mocosha.SoapTestClient.SimpleService.WriteResult Add(string key, string value) {
@@ -237,20 +237,20 @@ namespace Mocosha.SoapTestClient.SimpleService {
             return base.Channel.AddAsync(key, value);
         }
         
-        public Mocosha.SoapTestClient.SimpleService.WriteResult Update(string id, string value) {
-            return base.Channel.Update(id, value);
+        public Mocosha.SoapTestClient.SimpleService.WriteResult Update(string key, string value) {
+            return base.Channel.Update(key, value);
         }
         
-        public System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> UpdateAsync(string id, string value) {
-            return base.Channel.UpdateAsync(id, value);
+        public System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> UpdateAsync(string key, string value) {
+            return base.Channel.UpdateAsync(key, value);
         }
         
-        public Mocosha.SoapTestClient.SimpleService.WriteResult Remove(string id) {
-            return base.Channel.Remove(id);
+        public Mocosha.SoapTestClient.SimpleService.WriteResult Remove(string key) {
+            return base.Channel.Remove(key);
         }
         
-        public System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> RemoveAsync(string id) {
-            return base.Channel.RemoveAsync(id);
+        public System.Threading.Tasks.Task<Mocosha.SoapTestClient.SimpleService.WriteResult> RemoveAsync(string key) {
+            return base.Channel.RemoveAsync(key);
         }
     }
 }
