@@ -57,7 +57,7 @@ namespace Mocosha.SoapTestClient
                 { "a|add=", "Add item.", (k,v) => PrintWriteResult(client.Add(k,v))},
                 { "p|put=", "Update item by key.", (k,v) => PrintWriteResult(client.Update(k,v))},
                 { "d|remove=", "Delete item by key.", k => PrintWriteResult(client.Remove(k))},
-                { "h|help", "show this message and exit", h => shouldShowHelp = h != null },
+                { "h|help", "Show this message and exit", h => shouldShowHelp = h != null },
             };
 
             List<string> extra;
